@@ -1,0 +1,48 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --color-primary: #6366f1;
+  --color-secondary: #8b5cf6;
+  --color-accent: #f472b6;
+  --color-background: #f3f4f6;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+}
+
+.dark {
+  --color-primary: #818cf8;
+  --color-secondary: #a78bfa;
+  --color-accent: #f9a8d4;
+  --color-background: #111827;
+  --color-text: #f9fafb;
+  --color-text-light: #d1d5db;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.tool-card {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark .tool-card {
+  background-color: #1f2937;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+}
